@@ -2,8 +2,8 @@ AutoReqProv: no
 
 ##Init variables
 
-%global current 56.0a1
-%global packver 56
+%global current 57.0a1
+%global packver 57
 %global _optdir /opt
 %ifarch x86_64
 %global arch x86_64
