@@ -50,7 +50,7 @@ tar -jxvf firefox-%{current}.en-US.linux-*.tar.bz2  -C %{_builddir}
 install -dm 755 %{buildroot}/usr/{bin,share/{applications,icons/hicolor/128x128/apps},opt}
 install -dm 755 %{buildroot}/%{_optdir}/firefox-nightly/browser/defaults/preferences/
 
-install -m644 %{_builddir}/firefox/browser/icons/mozicon128.png %{buildroot}/usr/share/icons/hicolor/128x128/apps/firefox-nightly.png
+install -m644 %{_builddir}/firefox/browser/chrome/icons/default/default128.png %{buildroot}/usr/share/icons/hicolor/128x128/apps/firefox-nightly.png
 
 cp -rf %{_builddir}/firefox/* %{buildroot}/opt/firefox-nightly/
 ln -s /opt/firefox-nightly/firefox %{buildroot}/usr/bin/firefox-nightly
