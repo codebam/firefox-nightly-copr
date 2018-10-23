@@ -43,6 +43,9 @@ This package is a package built directly from Mozilla's nightly tarball. This pa
 wget -c --no-check-certificate -P %{_builddir} https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-%{current}.en-US.linux-%{arch}.tar.bz2
 tar -jxvf firefox-%{current}.en-US.linux-*.tar.bz2  -C %{_builddir}
 
+# sed some python scripts to comply with python2/3 policy
+find %{_builddir} -name '*.py' -exec sed -i -e 's,#!/usr/bin/python,#!/usr/bin/python2,' -e 's,/usr/bin/env python,/usr/bin/env python2,' -s {} \;
+
 ## Install Instructions
 
 %install
